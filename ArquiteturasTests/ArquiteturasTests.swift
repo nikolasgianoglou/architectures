@@ -20,11 +20,60 @@ final class ArquiteturasTests: XCTestCase {
 
     func testRegister() throws {
         let manager = UserManager(business: UserBusiness())
+        var userModel = UserModel()
         
+        let expectations = expectation(description: "Check log in succesfull")
+        
+        manager.register(email: "aaaaaaa", password: "12345") { model in
+            print(model.email)
+            userModel = model
+        } failureHandler: { error in
+            print(error.localizedDescription)
+        }
+        
+        manager.register(email: "teste@gmail.com", password: "12345") { model in
+            print(model.email)
+            userModel = model
+        } failureHandler: { error in
+            print(error.localizedDescription)
+        }
+        
+        manager.register(email: "teste@gmail.com", password: "12345") { model in
+            print(model.email)
+            userModel = model
+        } failureHandler: { error in
+            print(error.localizedDescription)
+        }
+        
+        waitForExpectations(timeout: 10) { error in
+            if let error = error {
+                XCTFail()
+            }
+            XCTAssertNotNil(userModel)
+        }
+
     }
     
     func testLogin() throws {
+        let manager = UserManager(business: UserBusiness())
         
+        manager.login(email: "aaaaa", password: "12345") { result in
+            switch result {
+            case .success(let userModel):
+                print(userModel.email)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        manager.login(email: "teste@teste.com", password: "12345") { result in
+            switch result {
+            case .success(let userModel):
+                print(userModel.email)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
     func testExample() throws {
         // This is an example of a functional test case.

@@ -17,7 +17,7 @@ class UserBusiness: UserBusinessProtocol {
     
     func login(email: String, password: String, completionHandler: @escaping (Result<UserModel, Error>) -> Void) {
         let userModel = UserModel(email: email, password: password)
-        let params: [AnyHashable: Any] = [Constants.ParametersKeys.body: [Constants.ParametersKeys.userModel: userModel]]
+//        let params: [AnyHashable: Any] = [Constants.ParametersKeys.body: [Constants.ParametersKeys.userModel: userModel]]
         
         provider.login(paramaters: getParams(email, password)) { result in
             switch result {

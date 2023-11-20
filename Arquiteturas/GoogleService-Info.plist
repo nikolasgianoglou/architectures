@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyAgoX6Ut1iQzwHBv7t9esxQ8de8ERSzzUA</string>
+	<string>AIzaSyCM1a9eqLJuAolji-ooPg8IMI9M_sniyL8</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1027327604033</string>
+	<string>363362461856</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>br.com.nikolas</string>
+	<string>br.com.nikolas.Arquiteturas</string>
 	<key>PROJECT_ID</key>
-	<string>fir-class-fa768</string>
+	<string>arquiteturas-22b9f</string>
 	<key>STORAGE_BUCKET</key>
-	<string>fir-class-fa768.appspot.com</string>
+	<string>arquiteturas-22b9f.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1027327604033:ios:aeac96819efd0d08275dc0</string>
+	<string>1:363362461856:ios:88cd10baf16466b61501c5</string>
 </dict>
 </plist>
